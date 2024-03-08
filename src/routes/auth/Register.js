@@ -15,14 +15,14 @@ export default function Register(props) {
                 type="text"
                 label="Username"
                 value={username}
-                onChange={e => setUsername(e.target.value)}
+                setValue={setUsername}
                 icon="fa-solid fa-user"
             />
             <Input
                 type="password"
                 label="Password"
                 value={password}
-                onChange={e => setPassword(e.target.value)}
+                setValue={setPassword}
                 icon="fa-solid fa-key"
             />
             <Button

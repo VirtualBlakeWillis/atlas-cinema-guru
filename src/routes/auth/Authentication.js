@@ -12,9 +12,51 @@ export default function Authentication(props) {
     const [username, setUsername] = useState('');
     const [password, setPassword] = useState('');
 
+    function handleSubmit(e) {
+        e.preventDefault();
+        if (_switch) {
+            fetch('http://localhost:8000/api/auth/login', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({username: username, password: password})
+            })
+            .then(response => response.json())
+            .then(data => {
+                if (data.message === "Logged in successfully") {
+                    localStorage.setItem('accessToken', data.accessToken);
+                    setIsLoggedIn(true);
+                    setUserUsername(username);
+                } else {
+                    console.log(data)
+                    alert(data.message);
+                }
+            });
+        } else {
+            fetch('http://localhost:8000/api/auth/register', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({username: username, password: password})
+            })
+            .then(response => response.json())
+            .then(data => {
+                if (data.message === "Registred successfully") {
+                    localStorage.setItem('accessToken', data.accessToken);
+                    setIsLoggedIn(true);
+                    setUserUsername(username);
+                } else {
+                    alert(data.message);
+                }
+            });
+        }
+    }
+
     return (
         <div className="auth-container">
-            <form className="auth-form">
+            <form className="auth-form" onSubmit={handleSubmit}>
                 <div className="auth-header">
                     <Button label="Sign In" className="bigButton" onClick={() => setSwitch(true)}/>
                     <Button label="Sign Up" className="bigButton" onClick={() => setSwitch(false)}/>
