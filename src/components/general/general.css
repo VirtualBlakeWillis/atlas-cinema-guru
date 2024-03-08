@@ -7,10 +7,15 @@
 
 }
 
+.icon {
+    padding-right: 6px;
+}
+
 /*          Input(text)         */
 .input {
     border: none;
     border-bottom: 1px solid #BB000E;
+    width: 100%;
 }
 .input:focus {
     outline: none;
@@ -23,6 +28,13 @@
     color: white;
     border: none;
     padding: 6px 12px;
+}
+
+.bigButton {
+    padding: 12px 24px;
+}
+.button::selection {
+    background-color: #BB000E;
 }
 
 .button:hover {

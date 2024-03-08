@@ -10,7 +10,7 @@ export default function Button(props) {
             className={`button ${className}`}
             onClick={onClick}
         >
-            {icon && <img src={icon} alt="icon" className="button-icon" />}
+            {icon && <div alt="icon" className={icon + " button-icon icon"} />}
             {label}
         </button>
     )

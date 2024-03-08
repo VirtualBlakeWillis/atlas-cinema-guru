@@ -1,0 +1,35 @@
+
+.auth-container {
+    width: 450px;
+    display: flex;
+}
+.auth-form {
+    width: 100%;
+}
+
+.auth-header {
+    width: 100%;
+    display: flex;
+    justify-content: stretch;
+    align-items: stretch;
+    margin-bottom: 20px;
+}
+.auth-header button {
+    flex: 1;
+}
+
+.form-body {
+    margin: 40px;
+}
+.form-body button {
+    float: right;
+    margin-bottom: 40px;
+}
+
+.tagline {
+    font-weight: bold;
+}
+
+.input-text {
+    justify-self: center;
+}

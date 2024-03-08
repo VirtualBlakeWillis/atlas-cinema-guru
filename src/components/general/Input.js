@@ -13,7 +13,7 @@ export default function Input(props) {
     }
     return (
         <div className="input-container">
-            {icon && <img src={icon} alt="icon" className="input-icon" />}
+            {icon && <div src={icon} alt="icon" className={icon + " input-icon icon"} ></div>}
             <label className="input-label">{label}:</label>
             <div className="input-wrapper">
                 <input
