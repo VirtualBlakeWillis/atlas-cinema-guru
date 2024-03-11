@@ -41,6 +41,12 @@
     background-color: #FF0000;
 }
 
+.nav-button {
+    background-color: black;
+    color: #BB000E;
+    font-weight: bold;
+}
+
 /*          SearchBar          */
 .search-wrapper {
     background-color: #2C2C2C;
