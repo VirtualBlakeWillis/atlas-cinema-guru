@@ -7,3 +7,7 @@
 
 }
 
+.dashboard-content {
+    display: flex;
+    flex-direction: row;
+}

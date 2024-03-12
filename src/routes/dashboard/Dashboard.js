@@ -1,5 +1,6 @@
 import './dashboard.css';
 import Header from '../../components/navigation/Header';
+import SideBar from '../../components/navigation/SideBar';
 
 export default function Dashboard(props ) {
     const userUsername = props.userUsername;
@@ -9,8 +10,11 @@ export default function Dashboard(props ) {
         <div className="dashboard-container">
             <Header userUsername={userUsername} setIsLoggedIn={setIsLoggedIn}/>
             <div className="dashboard-content">
-                <h1>Welcome to Atlas Cinema Guru</h1>
-                <p>Find the best movies and TV shows to watch</p>
+                <SideBar />
+                <div className="dashboard-main">
+                    <h1>Welcome to Atlas Cinema Guru</h1>
+                    <p>Find your favorite movies and TV shows</p>
+                </div>
             </div>
         </div>
     )
