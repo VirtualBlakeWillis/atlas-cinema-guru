@@ -2,7 +2,13 @@ import './App.css';
 import { useState, useEffect } from 'react';
 import axios from 'axios';
 
+import { BrowserRouter } from 'react-router-dom';
+
 import Authentication from './routes/auth/Authentication';
+import Header from './components/navigation/Header';
+import Dashboard from './routes/dashboard/Dashboard';
+import Activity from './components/Activity';
+import SideBar from './components/navigation/SideBar';
 
 
 function App() {
@@ -12,27 +18,35 @@ function App() {
 
   useEffect(() => {
     const token = localStorage.getItem('accessToken');
-    console.log(token);
-    axios.post('http://localhost:8000/api/auth/', {
+    if (token) {
+      axios.post('http://localhost:8000/api/auth/', {}, {
       headers: {
         'Authorization': `Bearer ${token}`
       }
     })
-    .then(res =>  {console.log(res); return res.json()})
-    .then(data => {
-      if (data.username) {
+    .then(res => {
+      if (res.data.username) {
         setIsLoggedIn(true);
-        setUserUsername(data.username);
+        setUserUsername(res.data.username);
+        console.log('logged in! isLoggedIn:', isLoggedIn);
       }
-    });
+    })
+    .catch(err => console.log(err));
+  } else {
+    console.log("No token found")
+  }
   });
 
   return (
-    <div className="App">
-      {isLoggedIn ? <div>Dashboard Component</div>
-        : <div>Authentication Component</div>}
-      <Authentication setIsLoggedIn={setIsLoggedIn} setUserUsername={setUserUsername} />
-    </div>
+    <BrowserRouter >
+      <div className="App">
+        {isLoggedIn ? 
+          <Dashboard userUsername={userUsername} setIsLoggedIn={setIsLoggedIn} />
+        :
+          <Authentication setIsLoggedIn={setIsLoggedIn} setUserUsername={setUserUsername} setPassword={setPassword} />
+        }
+      </div>
+    </BrowserRouter>
   );
 }
 

@@ -4,3 +4,9 @@
 .italic {
     font-style: italic;
 }
+
+li p {
+    /* width: 200px; */
+    text-overflow: ellipsis;
+  
+}

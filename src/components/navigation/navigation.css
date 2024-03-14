@@ -43,10 +43,15 @@ nav>ul {
 }
 
 nav > ul li {
-    padding: 1rem 0;
-    margin: 0 1rem;
+    padding: 0.75rem;
     width: 100%;
-    text-align: left;
+    display: flex;
+    align-items: center;
+    justify-content: left;
+}
+nav > ul li:hover {
+    background-color: red;
+    color: white;
 }
 /* icon */
 nav > ul li div {
@@ -59,9 +64,39 @@ nav > ul li div {
     color: white;
     text-decoration: none;
     text-align: left;
-    white-space: nowrap;
-    overflow: visible;
     position: relative;
+    overflow: hidden;
+    height: 100%;
+}
+
+.active {
+    background-color: #FF0000;
+}
+.sidebar:hover>ul li .fa-arrow-right {
+    display: block;
+    position: relative;
+    float: right;
+}
+.sidebar>ul li .fa-arrow-right {
+    display: none;
+}
+
+/*         Small Sidebar         */
+
+/* On Load, Hide */
+.sidebar.small>ul li p {
+    display: none;
+}
+.sidebar.small .sidebar-activities {
+    display: none;
+}
+
+/*        On Hover, show         */ 
+.sidebar:hover>ul li p {
+    display : block;
+}
+.sidebar:hover .sidebar-activities {
+    display: block;
 }
 
 nav ul {
@@ -73,10 +108,20 @@ nav ul {
 
     background-color: #2C2C2C;
     box-sizing: border-box;
-    padding: 0.5rem 1rem;
+    padding: 0.5rem;
     margin: 1rem;
+
+    text-align: left;
+}
+.sidebar-activities>p {
+    margin: 0;
+    font-size: 18px;
+    font-weight: bold;
     text-decoration-line: underline;
     text-decoration-color: white;
     text-decoration-style: solid;
+}
 
+.sidebar-activities>ul {
+    width: 200px;
 }

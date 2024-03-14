@@ -30,6 +30,7 @@ export default function Login(props) {
             <Button
                 label="Sign In"
                 className=""
+                type="submit"
                 onClick={() => {}}
                 icon="fa-solid fa-key"
             />

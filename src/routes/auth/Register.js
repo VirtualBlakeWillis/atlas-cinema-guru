@@ -28,6 +28,7 @@ export default function Register(props) {
             <Button
                 label="Sign Up"
                 className=""
+                type="submit"
                 onClick={() => {}}
                 icon="fa-solid fa-plus"
             />

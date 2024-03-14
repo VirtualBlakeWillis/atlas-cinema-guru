@@ -2,6 +2,7 @@
 .auth-container {
     width: 450px;
     display: flex;
+    background-color: white;
 }
 .auth-form {
     width: 100%;

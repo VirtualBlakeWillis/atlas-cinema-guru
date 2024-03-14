@@ -14,11 +14,15 @@
 /*          Input(text)         */
 .input {
     border: none;
-    border-bottom: 1px solid #BB000E;
     width: 100%;
 }
 .input:focus {
     outline: none;
+}
+.input-wrapper-text {
+    border-bottom: 1px solid #BB000E;
+    display: flex;
+    flex-direction: row;
 }
 
 /*          Button          */
@@ -32,6 +36,10 @@
 
 .bigButton {
     padding: 12px 24px;
+}
+.active {
+    background-color: #FF0000;
+
 }
 .button::selection {
     background-color: #BB000E;

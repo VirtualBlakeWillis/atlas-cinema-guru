@@ -58,8 +58,16 @@ export default function Authentication(props) {
         <div className="auth-container">
             <form className="auth-form" onSubmit={handleSubmit}>
                 <div className="auth-header">
-                    <Button label="Sign In" className="bigButton" onClick={() => setSwitch(true)}/>
-                    <Button label="Sign Up" className="bigButton" onClick={() => setSwitch(false)}/>
+                    <Button
+                        label="Sign In"
+                        className={"bigButton " + (_switch ? "active" : "")}
+                        type="button" onClick={() => setSwitch(true)}
+                    />
+                    <Button
+                        label="Sign Up"
+                        className={"bigButton " + (!_switch ? "active" : "")}
+                        type="button" onClick={() => setSwitch(false)}
+                    />
                 </div>
                 {_switch ? <Login username={username} setUsername={setUsername} password={password} setPassword={setPassword}/> 
                 : <Register username={username} setUsername={setUsername} password={password} setPassword={setPassword}/>}
