@@ -10,14 +10,14 @@ export default function SearchBar(props) {
 
     return(
         <div className="input-container">
-            <label className="input-label">Search:</label>
+            <label className="input-label"></label>
             <div className="input-wrapper search">
                 <span className="fas fa-search search-icon" />
                 <input
                     type="text"
                     className="search-input"
                     value={title}
-                    placeholder='Search...'
+                    placeholder='Search Movies'
                     onChange={handleInput}
                 />
             </div>

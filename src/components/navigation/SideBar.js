@@ -65,14 +65,19 @@ export default function SideBar({small, setSmall}) {
     return (
         <nav className={"sidebar " + (small ? "small" : "")}>
             <ul>
-                <li onClick={() => setActive(1)}>
+                <li onClick={() => setActive(1)}
+                    className={active === 1 ? "active" : ""}
+                >
                     <div className=" fa-solid fa-folder"></div>
                     <p>Home</p>
                     { active === 1 ? <div className="fa-solid fa-arrow-right"></div> : null
                     }
                     {/* <div className={"fa-solid fa-arrow-right" + (!active === 1 ? ' hidden' : "")}></div> */}
                 </li>
-                <li onClick={() => {setActive(2)}}>
+                <li onClick={() => {setActive(2)}}
+                    className={active === 2 ? "active" : ""}
+
+                >
                     <div className=" fa-solid fa-star"></div>
                     <p>Favorites</p>
                     {
@@ -81,7 +86,10 @@ export default function SideBar({small, setSmall}) {
                     {/* <div className={"hidden fa-solid fa-arrow-right" + (!active === 2 ? ' hidden' : "")}></div> */}
 
                 </li>
-                <li onClick={() => setActive(3)}>
+                <li onClick={() => setActive(3)}
+                    className={active === 3 ? "active" : ""}
+
+                >
                     <div className=" fa-solid fa-clock"></div>
                     <p>Watch Later</p>
                     {
@@ -102,7 +110,6 @@ export default function SideBar({small, setSmall}) {
                                 time={activity.time}
                             />
                         )
-                        /* */
                     })
                     }
                 </ul>

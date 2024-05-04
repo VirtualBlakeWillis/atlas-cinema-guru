@@ -2,7 +2,6 @@ import './App.css';
 import { useState, useEffect } from 'react';
 import axios from 'axios';
 
-import { BrowserRouter } from 'react-router-dom';
 
 import Authentication from './routes/auth/Authentication';
 import Header from './components/navigation/Header';
@@ -38,7 +37,6 @@ function App() {
   });
 
   return (
-    <BrowserRouter >
       <div className="App">
         {isLoggedIn ? 
           <Dashboard userUsername={userUsername} setIsLoggedIn={setIsLoggedIn} />
@@ -46,7 +44,6 @@ function App() {
           <Authentication setIsLoggedIn={setIsLoggedIn} setUserUsername={setUserUsername} setPassword={setPassword} />
         }
       </div>
-    </BrowserRouter>
   );
 }
 

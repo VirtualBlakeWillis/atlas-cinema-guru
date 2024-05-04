@@ -5,7 +5,7 @@ export default function Button(props) {
     const className = props.className;
     const onClick = props.onClick;
     const icon = props?.icon; //optional
-    const type= props.type;
+    const type = props?.type || "button"; //optional, default is button
     return (
         <button
             className={`button ${className}`}
