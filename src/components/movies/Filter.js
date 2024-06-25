@@ -40,19 +40,19 @@ export default function Filter(props) {
         { value: "lowestrated", label: "Lowest Rated" }
     ];
     const TagComponents = [
-        { value: "action", label: "Action" },
-        { value: "drama", label: "Drama" },
-        { value: "comedy", label: "Comedy" },
-        { value: "biography", label: "Biography" },
-        { value: "romance", label: "Romance" },
-        { value: "thriller", label: "Thriller" },
-        { value: "war", label: "War" },
-        { value: "history", label: "History" },
-        { value: "sport", label: "Sport" },
-        { value: "sci-fi", label: "Sci-Fi" },
-        { value: "documentary", label: "Documentary" },
-        { value: "crime", label: "Crime" },
-        { value: "fantasy", label: "Fantasy" }
+        { value: "Action", label: "Action" },
+        { value: "Drama", label: "Drama" },
+        { value: "Comedy", label: "Comedy" },
+        { value: "Biography", label: "Biography" },
+        { value: "Romance", label: "Romance" },
+        { value: "Thriller", label: "Thriller" },
+        { value: "War", label: "War" },
+        { value: "History", label: "History" },
+        { value: "Sport", label: "Sport" },
+        { value: "Sci-Fi", label: "Sci-Fi" },
+        { value: "Documentary", label: "Documentary" },
+        { value: "Crime", label: "Crime" },
+        { value: "Fantasy", label: "Fantasy" }
     ];
 
     return (

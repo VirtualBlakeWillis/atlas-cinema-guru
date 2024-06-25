@@ -5,6 +5,7 @@ import { useState } from 'react';
 import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
 import Tag from '../../components/movies/Tag';
 import Filter from '../../components/movies/Filter';
+import MovieCard from '../../components/movies/MovieCard';
 
 export default function Dashboard(props ) {
     const userUsername = props.userUsername;
@@ -53,6 +54,19 @@ export default function Dashboard(props ) {
                         title=""
                         setTitle={null}
                         />
+                        {/* testing purposes ONLY */}
+                        <MovieCard
+                        movie={{
+                            title: "GodHead: In a fiction, in a dream of passion",
+                            synopsis: "Dreamers in a lonely circus.",
+                            genres: ["Drama"],
+                            id: 2,
+                            imdbId: 'tt9899344',
+                            imageurls: [
+                                "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTYxnnMqQyMqz_sWOc-HIaB8QJu9ZeGd0ijnA&s"
+                            ]
+                        }}
+                         />
                     </div>
                     <Routes>
                         {/* Will create these componenets in later task */}

@@ -13,7 +13,7 @@ export default function SelectInput(props) {
     return (
         <div className="input-container">
             <label className="input-label">{label}:</label>
-            <div className="input-wrapper">
+            <div className="input-wrapper-text">
                 <select
                     className={`input ${className}`}
                     value={value}
