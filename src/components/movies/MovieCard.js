@@ -119,11 +119,6 @@ export default function MovieCard(props) {
                 <img className="movie-img" src={movie.imageurls[0]} alt='Movie Poster'/>
                 <h2>{movie.title}</h2>
             </div>
-            {/* 
-            movie title
-            movie synopsis
-            all the genres
-             */}
             <p>{movie.synopsis}</p>
             <ul>
                 {movie.genres.map((genre) => (

@@ -58,11 +58,11 @@ export default function Filter(props) {
     return (
         <div id="filter">
             <div className="filter-left">
-                <SearchBar value={title} onChange={setTitle} />
+                <SearchBar value={title} onChange={setTitle} className="dark"/>
                 <div className="input-group">
-                    <Input type="number" label="Min Year" value={minYear} onChange={setMinYear} />
-                    <Input type="number" label="Max Year" value={maxYear} onChange={setMaxYear} />
-                    <SelectInput label="Sort" options={sortOptions} value={sort} onChange={setSort} />
+                    <Input type="number" label="Min Year" value={minYear} onChange={setMinYear} className="dark"/>
+                    <Input type="number" label="Max Year" value={maxYear} onChange={setMaxYear} className="dark"/>
+                    <SelectInput label="Sort" options={sortOptions} value={sort} onChange={setSort} className="dark"/>
                 </div>
             </div>
             <div className="filter-right">
