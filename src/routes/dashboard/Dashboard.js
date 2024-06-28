@@ -7,6 +7,8 @@ import Tag from '../../components/movies/Tag';
 import Filter from '../../components/movies/Filter';
 import MovieCard from '../../components/movies/MovieCard';
 
+import HomePage from './HomePage';
+
 export default function Dashboard(props ) {
     const userUsername = props.userUsername;
     const setIsLoggedIn = props.setIsLoggedIn;
@@ -25,7 +27,8 @@ export default function Dashboard(props ) {
         <BrowserRouter >
             <div className="dashboard-container">
                 <Header userUsername={userUsername} setIsLoggedIn={setIsLoggedIn}/>
-                <div className="dashboard-content">
+                <HomePage />
+                {/* <div className="dashboard-content">
                     <SideBar 
                     small={small}
                     setSmall={setSmall}
@@ -41,7 +44,7 @@ export default function Dashboard(props ) {
                         genres={genres}
                         setGenres={setGenres}
 
-                        /> */}
+                        /> 
                         <Filter
                         minYear={0}
                         setMinYear={null}
@@ -54,7 +57,7 @@ export default function Dashboard(props ) {
                         title=""
                         setTitle={null}
                         />
-                        {/* testing purposes ONLY */}
+                       
                         <MovieCard
                         movie={{
                             title: "GodHead: In a fiction, in a dream of passion",
@@ -72,10 +75,10 @@ export default function Dashboard(props ) {
                         {/* Will create these componenets in later task */}
                         {/* <Route path="/home" element={<HomePage />} />
                         <Route path="/favorites" element={<Favorites />} />
-                        <Route path="/waterlater" element={<WatchLater />} /> */}
+                        <Route path="/waterlater" element={<WatchLater />} /> 
                         <Route path="/*" element={<Navigate to="/home" />} />
                     </Routes>
-                </div>
+                </div> */}
             </div>
         </BrowserRouter>
     )
