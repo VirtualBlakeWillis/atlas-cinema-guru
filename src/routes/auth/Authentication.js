@@ -43,12 +43,13 @@ export default function Authentication(props) {
             })
             .then(response => response.json())
             .then(data => {
-                if (data.message === "Registred successfully") {
+                if (data.message === "Registered successfully") {
                     localStorage.setItem('accessToken', data.accessToken);
                     setIsLoggedIn(true);
                     setUserUsername(username);
                 } else {
                     alert(data.message);
+                    console.log(data);
                 }
             });
         }
